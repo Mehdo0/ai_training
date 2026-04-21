@@ -48,7 +48,7 @@ train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
 model = QuickDrawBrain()
 criterion = nn.CrossEntropyLoss()           # The Teacher (Loss Function)
 optimizer = optim.Adam(model.parameters(), lr=0.001) # The Updater
-epochs = 20
+epochs = 5
 
 print(f"\nStarting training for {epochs} epochs...")
 
