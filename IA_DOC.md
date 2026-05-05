@@ -57,3 +57,8 @@ I'm not going further in this test but as we can see the precision goes and drop
 
 Now we have to increase this number by using a better computer . 
 
+Let's do understand better why are we limited in the quantity of drawings:
+
+If max_items = 50,000: You have 1.75 million drawings. When converted to PyTorch float32 Tensors, this takes up about 5.5 GB of RAM. Google Colab will handle this perfectly without breaking a sweat.
+
+If max_items = 100,000: You have 3.5 million drawings. This takes up roughly 11 GB of RAM. Because Python has to hold both the Numpy array and the PyTorch Tensor in memory at the exact moment it converts them, you will likely hit the 12.6 GB ceiling and Colab will crash with an "Out of Memory" error.

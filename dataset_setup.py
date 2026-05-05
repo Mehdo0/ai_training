@@ -1,12 +1,12 @@
 import numpy as np
 from sklearn.model_selection import train_test_split
-import os
+
 
 #array of every distinc drawing file
 categories = ['airplane', 'angel', 'anvil', 'bear', 'bee', 'brain', 'butterfly', 'camera', 'castle', 'cat', 'clarinet', 'computer', 'crab', 'dog', 'Eiffle Tower', 'elephant', 'fish', 'frog', 'guitar', 'hamburger', 'hand', 'horse', 'lion', 'mouse', 'owl', 'pineapple', 'radio', 'rifle', 'snowman', 'steak', 'suitecase', 'sword', 'toilet', 'train', 'tree']
 
 #Limit the items so you don't overwhelm your local processing power
-max_items_per_class = 10000
+max_items_per_class = 50000
 
 # Arrays to hold our merged data
 # Quick Draw bitmaps are 28x28 images flattened into an array of 784 pixels
